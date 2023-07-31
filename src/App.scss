@@ -1,0 +1,237 @@
+%shared-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  background-color: #4b0082;
+  box-shadow: 2px 4px 4px -4px hotpink;
+}
+
+.Container {
+  @extend %shared-container;
+  padding: 15px 20px;
+}
+
+.MobileContainer {
+  @extend %shared-container;
+  padding: 5px 2px;
+}
+
+%shared-navbar {
+  font-weight: 500;
+  color: #fff;
+  box-shadow: none;
+  margin-top: 10px;
+}
+
+.Navbar {
+  @extend %shared-navbar;
+  width: 30%;
+  font-size: 14px;
+}
+
+.MobileNavbar {
+  @extend %shared-navbar;
+  width: 250px;
+  font-size: 10px;
+}
+
+%shared-content {
+  font-style: italic;
+  font-weight: 500;
+  color: #dda0dd;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.Content {
+  @extend %shared-content;
+  font-size: 18px;
+  width: 40%;
+  margin-top: 30px;
+  line-height: 32px;
+}
+
+.MobileContent {
+  @extend %shared-content;
+  font-size: 10px;
+  width: 70%;
+  margin-top: 20px;
+  line-height: 16px;
+}
+
+.Content p {
+  /* animation: glow 1s ease-in-out infinite alternate; */
+  text-shadow: 0 0 100px #fff, 0 0 100px #fff, 0 0 210px #fff, 0 0 200px hotpink,
+    0 0 240px hotpink, 0 0 2px hotpink, 0 0 2px hotpink, 0 0 1px hotpink;
+}
+
+.MobileContent p {
+  /* animation: glow 1s ease-in-out infinite alternate; */
+  text-shadow: 0 0 100px #fff, 0 0 100px #fff, 0 0 210px #fff, 0 0 200px hotpink,
+    0 0 240px hotpink, 0 0 2px hotpink, 0 0 2px hotpink, 0 0 1px hotpink;
+}
+
+/* @keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  }
+  to {
+    text-shadow: 0 0 20px #fff;
+  }
+} */
+
+%shared-flexbox {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  border-radius: 8px;
+}
+
+.FlexBox {
+  @extend %shared-flexbox;
+  margin-top: 250px;
+}
+
+.MobileFlexBox {
+  @extend %shared-flexbox;
+  margin-top: -50px;
+}
+
+%shared-element {
+  font-style: italic;
+  margin: 8px;
+  flex-basis: 10%;
+  color: #dda0dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid #fff; */
+  font-size: 20px;
+  text-shadow: 0 0 100px #fff, 0 0 100px #fff, 0 0 210px #fff, 0 0 200px hotpink,
+    0 0 240px hotpink, 0 0 2px hotpink, 0 0 2px hotpink, 0 0 1px hotpink;
+}
+
+.Element {
+  @extend %shared-element;
+  font-size: 20px;
+}
+
+.MobileElement {
+  @extend %shared-element;
+  font-size: 10px;
+}
+
+.Button {
+  padding: 12px;
+  border-radius: 24px;
+  background-color: #cbc3e3;
+  color: #301934;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.TitleBox {
+  padding: 4px;
+  height: 38px;
+  border-radius: 4px;
+  display: flex;
+}
+
+%shared-title {
+  margin-top: 15px;
+  color: #fff;
+}
+
+.Title {
+  @extend %shared-title;
+  margin-left: 25px;
+}
+
+.MobileTitle {
+  @extend %shared-title;
+  margin-left: 15px;
+  font-size: 12px;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+}
+
+.hover-underline-animation:hover {
+  color: hotpink;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  margin-top: 10px;
+  background-color: hotpink;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+%shared-socials {
+  background-color: #4b0082;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  box-shadow: 4px 4px 4px -4px hotpink;
+}
+
+.Socials {
+  @extend %shared-socials;
+  margin-top: 100px;
+}
+
+.MobileSocials {
+  @extend %shared-socials;
+}
+
+.Socials a {
+  text-decoration: none;
+  padding: 6px;
+}
+
+.Socials a img {
+  width: 30px;
+  height: 30px;
+}
+
+.MobileSocials a {
+  text-decoration: none;
+  padding: 3px;
+}
+
+.MobileSocials a img {
+  width: 20px;
+  height: 20px;
+}
+
+.Dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #dda0dd;
+  align-self: center;
+}
