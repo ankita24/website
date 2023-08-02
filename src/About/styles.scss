@@ -1,0 +1,174 @@
+.OuterContainer {
+  height: 100vh;
+  width: 100%;
+  background: url("../images/artistic-neon-purple-hd-wallpaper-thumb.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+%shared-content {
+  font-style: italic;
+  font-weight: 500;
+  color: #dda0dd;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.Content {
+  @extend %shared-content;
+  font-size: 18px;
+  width: 40%;
+  line-height: 32px;
+  padding-top: 30px;
+}
+
+.MobileContent {
+  @extend %shared-content;
+  font-size: 10px;
+  width: 70%;
+  line-height: 16px;
+  padding-top: 40px;
+}
+
+.Content p {
+  /* animation: glow 1s ease-in-out infinite alternate; */
+  text-shadow: 0 0 100px #fff, 0 0 100px #fff, 0 0 210px #fff, 0 0 200px hotpink,
+    0 0 240px hotpink, 0 0 2px hotpink, 0 0 2px hotpink, 0 0 1px hotpink;
+}
+
+.MobileContent p {
+  /* animation: glow 1s ease-in-out infinite alternate; */
+  text-shadow: 0 0 100px #fff, 0 0 100px #fff, 0 0 210px #fff, 0 0 200px hotpink,
+    0 0 240px hotpink, 0 0 2px hotpink, 0 0 2px hotpink, 0 0 1px hotpink;
+}
+
+%shared-flexbox {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.FlexBox {
+  @extend %shared-flexbox;
+}
+
+.MobileFlexBox {
+  @extend %shared-flexbox;
+}
+
+%shared-element {
+  font-style: italic;
+  margin: 20px 8px;
+  flex-basis: 10%;
+  color: #dda0dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid #fff; */
+  font-size: 20px;
+  text-shadow: 0 0 100px #fff, 0 0 100px #fff, 0 0 210px #fff, 0 0 200px hotpink,
+    0 0 240px hotpink, 0 0 2px hotpink, 0 0 2px hotpink, 0 0 1px hotpink;
+}
+
+.Element {
+  @extend %shared-element;
+  font-size: 20px;
+}
+
+.MobileElement {
+  @extend %shared-element;
+  font-size: 10px;
+}
+
+.Button {
+  padding: 12px;
+  border-radius: 24px;
+  background-color: #cbc3e3;
+  color: #301934;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.TitleBox {
+  padding: 4px;
+  height: 38px;
+  border-radius: 4px;
+  display: flex;
+}
+
+%shared-title {
+  margin-top: 15px;
+  color: #fff;
+}
+
+.Title {
+  @extend %shared-title;
+  margin-left: 25px;
+}
+
+.MobileTitle {
+  @extend %shared-title;
+  margin-left: 15px;
+  font-size: 12px;
+}
+
+
+
+%shared-socials {
+  background-color: #4b0082;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  box-shadow: 4px 4px 4px -4px hotpink;
+}
+
+.Socials {
+  @extend %shared-socials;
+  margin-top: 100px;
+}
+
+.MobileSocials {
+  @extend %shared-socials;
+}
+
+.Socials a {
+  text-decoration: none;
+  padding: 6px;
+}
+
+.Socials a img {
+  width: 30px;
+  height: 30px;
+}
+
+.MobileSocials a {
+  text-decoration: none;
+  padding: 3px;
+}
+
+.MobileSocials a img {
+  width: 20px;
+  height: 20px;
+}
+
+.Dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #dda0dd;
+  align-self: center;
+}
