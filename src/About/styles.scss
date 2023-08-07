@@ -50,7 +50,7 @@
   flex-flow: row wrap;
   border-radius: 8px;
   position: absolute;
-  bottom: 40px;
+  
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -60,10 +60,12 @@
 
 .FlexBox {
   @extend %shared-flexbox;
+  bottom: 40px;
 }
 
 .MobileFlexBox {
   @extend %shared-flexbox;
+  bottom: 10px;
 }
 
 %shared-element {
