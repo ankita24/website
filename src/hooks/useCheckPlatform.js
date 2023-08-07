@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import  { useState,useEffect } from "react";
 
 export default function useCheckPlatform() {
   const [width, setWidth] = useState(window.innerWidth);
